@@ -23,27 +23,20 @@ Kubernetes · kubectl · kind · Docker · YAML
 ## Commands
 
 ```bash
-# Apply manifests
 kubectl apply -f deployment.yaml
 kubectl apply -f service.yaml
 
-# Check resources
 kubectl get pods
 kubectl get svc
 
-# Scale a deployment
 kubectl scale deployment <name> --replicas=<n>
 
-# Update an image
 kubectl set image deployment/<name> <container>=<image>:<tag>
 
-# Roll back
 kubectl rollout undo deployment/<name>
 
-# Inspect a Pod
 kubectl describe pod <pod-name>
 
-# Work with namespaces
 kubectl apply -f deployment.yaml -n <namespace>
 kubectl get pods -n <namespace>
 ```
